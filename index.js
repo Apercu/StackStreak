@@ -3,8 +3,8 @@
 var CronJob = require('cron').CronJob;
 var Nightmare = require('nightmare');
 
-var email = '' || process.env.SOMAIL;
-var pass = '' || process.env.SOPASS;
+var email = process.env.SOMAIL || '';
+var pass = process.env.SOPASS || '';
 
 new CronJob('00 00 * * * *', function () {
 
